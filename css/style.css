@@ -230,7 +230,7 @@ h6 {
 }
 
 #intro .intro-info .btn-get-started,
-#intro .intro-info .btn-services {
+#intro .intro-info .btn-services{
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -246,10 +246,30 @@ h6 {
 }
 
 #intro .intro-info .btn-get-started:hover,
-#intro .intro-info .btn-services:hover {
+#intro .intro-info .btn-services:hover{
   background: #0a98c0;
 }
 
+/*button basic*/
+
+.btn-basic{
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1bb1dc;
+  color: #fff;
+}
+.btn-basic:hover{
+	background: #0a98c0;
+	color:#fff;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -575,6 +595,7 @@ h6 {
   background-color: #ebf1fa;
   transition: .5s;
 }
+
 
 /* Services Section
 --------------------------------*/
@@ -1141,7 +1162,7 @@ h6 {
   margin-bottom: 15px;
 }
 
-#pricing .card .btn {
+#pricing .card .btn .btn-basic{
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 500;
@@ -1155,7 +1176,7 @@ h6 {
   color: #fff;
 }
 
-#pricing .card .btn:hover {
+#pricing .card .btn:hover{
   background: #0a98c0;
 }
 
