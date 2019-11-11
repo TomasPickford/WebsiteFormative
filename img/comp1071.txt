@@ -1,0 +1,103 @@
+#Taking input f0 and printing the beginning of the sequence
+	IN
+	STO	n
+	OUT
+
+#start and check_two used to check whether value stays within the boundaries of 2 < f0 < 341
+start	LDA	temp
+		ADD n
+		STO temp
+		SUB	threefourtwo
+		BRP	end
+
+https://millennialaire.co.uk/wp-admin/post.php?post=111&action=elementor#
+check_two	LDA	temp
+	  		SUB	two
+	  		BRP	check_if_even
+	  		BR	end
+
+	  		
+#Checking if the number is even
+check_if_even   BRZ even_condition
+				LDA temp
+	      		SUB	two
+	     		STO temp
+	      		BRP	 check_if_even
+	      		BR 	 odd	
+	  
+
+#Operator for a number which is greater than 2 and even
+even_condition	LDA n
+				BRZ end_even
+				SUB two
+				STO n
+				LDA count
+				ADD one
+				STO count
+				BRP	even_condition
+				BR end
+
+
+
+
+#odd_condition 	mutliplication
+#	       LDA	temp
+#	       ADD	one
+	       
+	        
+#multiplication	BRZ	end_odd
+#	       LDA	temp
+#	       ADD	temp
+#	       STO temp
+#	       LDA	three
+#	       SUB	one
+#	       STO	three
+#	       BRP	multiplication
+	       	       
+	      
+
+end	LDA count
+	OUT
+	HLT
+
+end_even	LDA	count
+	 		STO	n
+	 		OUT
+	 		SUB count
+	 		STO count
+	 		LDA	temp
+	 		SUB temp
+	 		STO temp
+	 		BRP start
+
+
+end_odd LDA 	count
+	OUT
+	HLT
+
+
+
+				
+
+
+
+threefourtwo	DAT	342
+one	DAT	1
+two	DAT	2
+temp	DAT	
+n	DAT	
+three	DAT	3
+count	DAT	0
+
+
+
+
+
+
+
+
+
+
+
+
+
